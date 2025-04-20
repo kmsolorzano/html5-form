@@ -29,7 +29,10 @@
         </div>
         <div class="col-4">
           <label for="exampleFormControlInput1" class="form-label">Amount</label>
-          <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Amount">
+          <div class="input-group">
+            <span class="input-group-text">$</span>
+            <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Amount">
+          </div>
         </div>
       </div>
       <div class="row mx-0 my-3">
@@ -50,7 +53,7 @@
         </div>
         <div class="col-3">
           <label for="exampleFormControlInput1" class="form-label">State</label>
-          <input type="text" class="form-control" id="exampleFormControlInput1">
+          <input type="number" class="form-control spinner" id="exampleFormControlInput1" placeholder="Pick a state">
         </div>
         <div class="col-3">
           <label for="exampleFormControlInput1" class="form-label">Postal code</label>
@@ -92,18 +95,28 @@
         <div class="col-3">
 
         </div>
-        <div class="col-6">
+        <div class="col-6 d-flex flex-column">
           <label for="exampleFormControlTextarea1" class="form-label">Message</label>
           <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-          <span>Add any notes here</span>
+          <span class="text-secondary mt-2">Add any notes here</span>
         </div>
       </div>
 
     </div>
     
-    <div class="card-footer">
-      Card footer
+    <div class="card-footer d-flex justify-content-end gap-2">
+      <button type="button" class="btn btn-secondary">Cancel</button>
+      <button type="button" class="btn btn-primary">Send</button>
     </div>
   </div>
+  <style> 
+    .spinner::-webkit-inner-spin-button,
+    .spinner::-webkit-outer-spin-button {
+  opacity: 1;
+}
+label{
+  font-size: 20px;
+}
+  </style>
 </body>
 </html>
